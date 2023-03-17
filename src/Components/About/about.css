@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img.about-img {
+    width: 20rem;
+    height: 20rem;
+    animation: slide-down 1s ease-in;
+}
+div.about-me-data {
+    padding: 0 2rem;
+}
+
+@media (max-width:786px){
+
+    img.about-img { 
+         width: 15rem;
+         height: 14rem ;
+         border-radius: 50%;
+         border: 4px solid var(--second);
+
+        }
+}
+
+div.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+div.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 1rem auto;
+    background-color: var(--text-color);
+}
+
+ul.about-me-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+ul.about-me-list li {
+    display:  inline-block;
+}
+ul.about-me-list li FontAwesomeIcon{
+    
+    color: var(--second);    
+}
+.about-me-icons {
+    color: var(--second);
+
+}
+ul.about-me-list > :not(:first-child) {
+    margin-left: 1rem;
+}
+
+ul.about-me-list li > * {
+    margin-right: 0.2rem;
+}
+div.about-me-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:576px){
+    div.hide-for-mobile {
+        display: none;
+
+    }
+    div.about-me-info{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*@media (max-width:576px){
+    ul.about-me-list li {
+    display:block;
+    }  
+    ul.about-me-list:first-child{
+        color: red;
+        margin-right: 0.8rem;
+    }
+}*/

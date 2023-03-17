@@ -1,0 +1,10 @@
+*,*::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --second: #DC143C;
+    --lightText:#F8F8F8;
+    --overlay: rgba(16, 16, 16, 90%)
+  }

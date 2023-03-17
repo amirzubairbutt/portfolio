@@ -1,0 +1,85 @@
+
+
+:root{
+  --second: #DC143C;
+  --text-color:black;
+  --light-dark: white;
+  --overlay: rgba(16, 16, 16, 90%);
+  --bg-color:#333 ;
+}
+
+
+.App.light {
+  --bg-color:#F0F0F0;
+  --text-color:black;
+  --second:#00008B;
+  --light-dark: #F5F5F5;
+}
+
+.App.dark {
+   --bg-color:black;
+   --text-color:#F0F0F0;
+   --second:#FFD700;
+  --light-dark:#181818;
+}
+.container-xxl {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+}
+
+body#body{ 
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes  slide-right {
+  
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes  slide-left {
+  
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes  slide-down {
+  
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes typing-effect {
+  from {width: 0;}
+  to {width:18rem;}
+  
+}

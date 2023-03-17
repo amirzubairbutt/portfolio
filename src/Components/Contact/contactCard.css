@@ -1,0 +1,32 @@
+div.contact-card {
+    width: 20rem;
+    height: 12rem;
+    padding: 2.2rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 17px 19px 11px -15px rgba(0,0,0,0.47);
+    perspective: 1000px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: var(--light-dark);
+    color: var(--text-color);
+}
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width:400px) {
+    div.card {
+        width: 85%;
+        height: 17rem;
+    }
+}
+.contact-icon {
+    color: var(--second);
+    display: block;
+}

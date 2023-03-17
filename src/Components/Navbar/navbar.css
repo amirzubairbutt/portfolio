@@ -1,0 +1,253 @@
+*,*::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul.navbar-ul li.name h5{
+    text-align:center;
+}
+
+#navbar {
+    background-color: var(--light-dark);
+
+}
+div.navbar-container {
+    background-color: var(--light-dark);
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0rem;
+    right: 0rem;
+    z-index: 1010;
+}
+div.navbar {
+    background-color: var(--bg-color);
+    color: var(--text-color); 
+    z-index: 999;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+}
+
+div.navbar > * {
+    position: relative;
+}
+div.navbar ul{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.navbar-ul li{
+    
+    display: inline-block;
+    margin-left: 0.4rem;
+    
+}
+
+ul.navbar-ul.pc li.resume{
+    border: 1.5px solid var(--second);
+
+}
+ul.navbar-ul.mobile li.resume a{
+    background-color: var(--bg-color);
+    color: var(--text-color); 
+    cursor: pointer;
+}
+
+ul.navbar-ul.pc li:hover{
+    background-color: var(--second);
+    cursor: pointer;
+}
+
+ul.nacvar-ul.pc li:hover {
+    cursor: default;
+}
+ul.navbar-ul.pc li:hover a {
+
+    color:var(--bg-color);
+}
+
+
+ul.navbar-ul li a{
+    display: block;
+
+    padding: 0.6rem 0.8rem;
+}
+
+
+ul.navbar-ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+
+div.navbar button.navbar-btn{
+    display: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    outline: none;
+    border: none;
+}
+
+div.navbar button.navbar-btn:hover{
+    cursor: pointer;
+    background-color: var(--bg-color);
+    color: var(--second);
+    transform: scale(1.1);
+}
+nav.pc{
+    overflow: hidden;
+}
+/* Mobile Responsive */
+ul.navbar-ul.mobile li.name{
+    opacity: 1;
+}
+
+ul.navbar-ul.mobile li:hover {
+    cursor: pointer;
+}
+
+nav.mobile{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--overlay);
+    z-index: 1000;
+}
+
+nav.mobile ul.navbar-ul.mobile{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    position: absolute;
+    width: 15rem;
+    left: 0rem;
+    top: 0rem;
+    bottom: 0rem;
+    padding: 1rem 0.5rem ;
+    border-radius: 0.5rem;
+    height: 100vh;
+    border-radius: 0px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+ul.navbar-ul.mobile li{
+    padding: 1rem 0.5rem;
+    width: 100%;
+    display: block;
+    opacity: 0.8;
+}
+ul.navbar-ul.mobile li a {
+    display: inline;
+}
+
+div.navbar button.navbar-btn.mobile {
+    position: fixed;
+    z-index: 1001;
+    top: 2;
+    right: 1rem;
+    background-color:rgba(0, 0, 0, 0);
+    color: white;
+}
+.icons{
+    color: var(--second);
+}
+.icons.mobile {
+    margin-right: 0.6rem;
+}
+nav.pc{
+    transition: width 2s;
+}
+@media screen and (max-width:768px){
+    div.navbar nav.pc{
+        width: 0px;
+        height: 0px;
+        display: none;
+    }
+
+    div.navbar button.navbar-btn {
+        display: block;
+    }
+}
+form-check-input:checked {
+    background-color: var(--second);
+    border-color: var(--second);
+    
+}
+
+.form-switch {
+    padding-left: 1rem !important;
+    padding-right:0.2rem
+}
+.form-switch .form-check-input {
+    margin-left: 0rem;
+    float:none;
+
+}
+li.form-check.form-switch{
+    cursor: default !important;
+}
+input.form-check-input {
+    padding: 0 !important;
+    cursor: pointer;
+}
+ul.navbar-ul.pc li.form-check:hover{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+}
+
+.form-check-input:checked {
+    background-color: var(--second);
+    border-color: var(--second);
+    
+}
+
+@media screen and (max-width:768px){
+    div.dark-toggle-btn {
+        position: fixed;
+    }
+    .form-switch .form-check-input {
+        width: 2em;
+        float:none;
+        margin-left:2.5rem ;
+    }
+    .form-switch {
+        padding-left: 0.6rem !important;
+    }
+    
+}
+button.go-to-top {
+position: fixed;
+background-color: var(--second);
+color: var(--bg-color);
+bottom: 5rem;
+right: 0rem;    
+border-radius: 0.5rem 0 0 0;
+z-index:999;
+border: none;
+outline: none;
+}
+button.go-to-top a{
+    margin-right: 0;
+    display: block;
+    padding: 0.4rem 0.8rem;
+
+}
+
+
+.go-top-arrow {
+    
+    color: var(--bg-color);
+}
