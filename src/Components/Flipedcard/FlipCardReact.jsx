@@ -9,8 +9,8 @@ export const FlipCardReact = () => {
 
   const handleHire = () => {
     const recipient = "saad.u922@gmail.com";
-    const subject = "Hey Saad";
-    const body = "Would you like to join us";
+    const subject = "Interview call";
+    const body = "Hey Saad we would like to meet you";
     const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoUrl;
   }

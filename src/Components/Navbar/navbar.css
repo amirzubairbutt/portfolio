@@ -28,8 +28,9 @@ div.navbar {
     overflow: hidden;
     position: absolute;
     top: 0;
-    left: 1rem;
-    right: 1rem;
+    left: 0rem;
+    right: 0rem;
+    padding: 0 1rem;
 }
 
 div.navbar > * {

@@ -30,8 +30,8 @@ export const Projects = () => {
             <div className='after-hover mt-lg-4 '>
                 <p>BookShop having functionality of adding and removing products from cart
                 </p>
-                <p className='mt-2'>Designed with</p>
                 <ul className='project-ul'> 
+                  <p className='mb-3'>Developed with</p>
                   <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> Tailwind CSS </li>
                   <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> React </li> 
                 </ul>
@@ -49,8 +49,7 @@ export const Projects = () => {
                 <img src={impactpc} alt='Website' className='website' />
             </div>
             <div className='after-hover'>
-                <p>Pixel Perfect Fully Responsive sites designed with
-                </p>
+                <p>Pixel Perfect Fully Responsive sites developed with </p>
                 <ul className='project-ul'> 
                   <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> CSS </li>
                   <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> Bootstrap </li> 
@@ -77,12 +76,11 @@ export const Projects = () => {
                 <img src={calculator} alt='Calculator' className='calculator' />
             </div>
             <div className='after-hover'>
-                <p>Calculator App Design in React</p>
+                <p>Calculator App developed in</p>
                 
                 <ul className='project-ul'> 
-                  <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/>   </li>
-                  <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> Bootstrap </li> 
-                  <li> <FontAwesomeIcon icon={faCaretRight} className="project-icons"/>Tailwind CSS </li>
+                  <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> React </li>
+                  <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> Bootstrap </li>
                 </ul>
                 <div className="live-btn"><Link to="https://brawny-receptive-sorrel.glitch.me/" target="_blank">
                 Live Preview <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 
@@ -98,13 +96,14 @@ export const Projects = () => {
                 <img src={todolist} alt='Calculator' className='website' />
             </div>
             <div className='after-hover'>
-                <p>Todo list in React</p>
-                <p className='mt-2'>CRUD opeerations</p>
+                <p>Todo list with CRUD Operations</p>
                 
                 <ul className='project-ul'> 
                 
-                  <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> Bootstrap </li> 
-                  <li> <FontAwesomeIcon icon={faCaretRight} className="project-icons"/>Tailwind CSS </li>
+                <p className='mb-4'>Developed in </p>
+                
+                 <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> React </li> 
+                 <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> Bootstrap </li> 
                 </ul>
                 <div className="live-btn"><Link to="https://todo-list-green-nine.vercel.app/" target="_blank">
                 Live Preview <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 

@@ -57,6 +57,7 @@ color: var(--second);
  div.after-hover {
     opacity: 0;
     display: none;
+    padding: 0.5rem 1rem;
  }
  div.before-hover {
     margin: 0 auto;
