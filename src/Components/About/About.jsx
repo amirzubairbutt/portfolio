@@ -23,7 +23,7 @@ export const About = () => {
       <p className='mt-lg-2 mt-3'><b>I am Saad ur Rehman, A Front-End Developer, 
         Expert in resposive designs, have wroking experince in React.js Technology</b> </p>
       <p className='mt-lg-2 mt-3'> I am Fresh Fornt-End React Developer who wants to work in professional environment. I have work experince in 
-      React and JavaScropt. I can design fully responsive sites with Bootstrap and tailwind CSS.I am self-driven and
+      React and JavaScript. I can design fully responsive sites with Bootstrap and tailwind CSS.I am self-driven and
       self-motivated and ready to accept challenges.
         </p>
          <div className="line"> </div>

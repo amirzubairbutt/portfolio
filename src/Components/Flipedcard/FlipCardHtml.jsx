@@ -7,7 +7,7 @@ export const FlipCardHtml = () => {
 
   const [flipped ,setFlipped] = useState(false);
   const handleHire = () => {
-    const recipient = "saad.u922@gmail.com";
+    const recipient = "saad.ur922@gmail.com";
     const subject = "Interview call";
     const body = "Hey Saad we would like to meet you";
     const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
