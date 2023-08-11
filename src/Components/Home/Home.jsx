@@ -11,7 +11,10 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 export const Home = () => {
    
-  const string =  ["Front-End Developer", "Responsive Designs", "React.js"];
+  const string =  ["MERN-Stack Developer","Crafting Experiences with React", "Redux State Master", "Responsive Designs Specialist",
+
+                  
+                  ];
 
   const [index, setIndex] = useState(0);
 

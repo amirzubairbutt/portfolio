@@ -6,6 +6,8 @@ import { FlipcardRes } from '../Flipedcard/FlipcardRes';
 import "./cardSlider.css"
 import { FlipCardHtml } from '../Flipedcard/FlipCardHtml';
 import { FlipCardReact } from '../Flipedcard/FlipCardReact';
+import { FlipCardBackend } from '../Flipedcard/FlipCardBackend';
+import { FlipCardDatabase } from '../Flipedcard/FlipCardDatabase';
 
 export const CardSlider = () => {
 
@@ -53,6 +55,8 @@ export const CardSlider = () => {
         <FlipCardHtml />
         <FlipcardRes />
         <FlipCardReact />
+        <FlipCardBackend/>
+        <FlipCardDatabase/>
     </Slider>
     </div>
  
