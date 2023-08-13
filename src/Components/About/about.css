@@ -56,16 +56,42 @@ ul.about-me-list li FontAwesomeIcon{
     color: var(--second);
 
 }
-ul.about-me-list > :not(:first-child) {
+/* ul.about-me-list > :not(:first-child) {
     margin-left: 1rem;
+} */
+
+ul.about-me-list li {
+    padding:0.2rem 0rem ;
+
+    flex-basis: 22%;
+}
+
+@media (max-width:576px){
+
+    ul.about-me-list li {
+
+        flex-basis: 40%;
+    }
 }
 
 ul.about-me-list li > * {
-    margin-right: 0.2rem;
+
+    margin-right: 0.4rem;
+
+}
+
+
+ul.about-me-list li {
+    margin-right: 1rem
 }
 div.about-me-info{
     display: flex;
     justify-content: space-between;
+}
+
+ul.about-me-list {
+    display: flex;
+    
 }
 
 @media screen and (max-width:576px){

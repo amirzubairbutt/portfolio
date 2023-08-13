@@ -1,6 +1,4 @@
-img.calculator {
-    width: 12rem;
-}
+
 
 @media screen and (max-width:576px){
     img.calculator {
@@ -81,7 +79,6 @@ div.project-card:hover div.after-hover{
     div.live-btn a {
         color: var(--bg-color);
         display: inline-block;
-        padding: 0.8rem;
         text-decoration:none;
         background-color: var(--second);
         border-radius: 0.2rem;

@@ -29,19 +29,20 @@ export const About = () => {
          <div className="line"> </div>
          <div>
           <p>Technologies i have worked with</p>
-          <ul className='about-me-list mt-3 mt-lg-2'>
+          <ul className='about-me-list mt-3 mt-lg-2 d-flex flex-wrap'>
           <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Java Script</li>
             <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> React</li>
             <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Redux Thunk</li>
             <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Tailwind CSS</li>
             <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Bootstrap</li>
-          </ul>
-
-          <ul className='about-me-list mt-3 mt-lg-2'>
             <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Node.js</li>
             <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Express.js</li>
             <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> MongoDB</li>
           </ul>
+
+
+            
+
           <div className="line"></div>
           <div>
             <div className="row g-3 about-me-info">

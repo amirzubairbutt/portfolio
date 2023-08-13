@@ -1,22 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FlipcardRes } from '../Flipedcard/FlipcardRes';
 import "./cardSlider.css"
-import { FlipCardHtml } from '../Flipedcard/FlipCardHtml';
-import { FlipCardReact } from '../Flipedcard/FlipCardReact';
-import { FlipCardBackend } from '../Flipedcard/FlipCardBackend';
-import { FlipCardDatabase } from '../Flipedcard/FlipCardDatabase';
+import { services } from '../../data';
+import { Cards } from './Cards';
 
 export const CardSlider = () => {
+
 
   const settings = {
 
     slidesToShow:3,
     arrows:false,  
     autoplay:true,
-    autoplaySpeed:3000,
+    autoplaySpeed:2000,
     responsive: [
        {
         breakpoint:1024,
@@ -52,11 +50,15 @@ export const CardSlider = () => {
 
     <div className="card-deck">
     <Slider {...settings}>
-        <FlipCardHtml />
+
+      {services.map(service => <Cards service ={service}/>)}
+
+      
+        {/* <FlipCardHtml />
         <FlipcardRes />
         <FlipCardReact />
         <FlipCardBackend/>
-        <FlipCardDatabase/>
+        <FlipCardDatabase/> */}
     </Slider>
     </div>
  

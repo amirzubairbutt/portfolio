@@ -31,7 +31,7 @@ const rootRef = useRef(null);
   return (
     <div className= {`App ${theme}`}>
     <BrowserRouter>
-    <div class="container-xxl" ref={rootRef}>
+    <div className="container-xxl" ref={rootRef}>
       <Navbar handleTheme={handleTheme}/>
       <Home />
       <About />

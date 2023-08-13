@@ -5,7 +5,7 @@ p{
 }
 div.card-deck {
     overflow-x: hidden;
-    height: 22rem;
+    /* height: 22rem; */
 }
 div.card {
     width: 20rem;
@@ -71,9 +71,10 @@ div.front{
 
 .card .front,
 .card .back {
+
     transition: 0.8s;
-backface-visibility: hidden;
-position: absolute;
+    backface-visibility: hidden;
+    position: absolute;
 }
 .card .front {
     z-index: 990;

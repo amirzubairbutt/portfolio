@@ -5,14 +5,13 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-
-import calculator from "../../assets/images/Calculator.png";
-import todolist from "../../assets/images/todolistpc.png"
 import bookshoppc from "../../assets/images/bookshoppc.jpg";
 import impactpc from "../../assets/images/impactpc.png"
 import MERNTodoList from "../../assets/images/MERNTodoList.png"
 import Exclusive from "../../assets/images/Exclusive.png"
 import WhatsappWeb from "../../assets/images/WhatsappWeb.png"
+import { LivePreview } from "./LivePreview";
+import { links } from "../../data";
 
 
 
@@ -45,9 +44,8 @@ export const Projects = () => {
                     <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/>Animations with CSS</li>
 
                 </ul>
-                <div className="live-btn"><Link to="https://e-commerece-peach.vercel.app/" target="_blank">
-                Live Preview <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 
-                </Link></div>
+
+                <LivePreview link ={links.E_COMMERECE} name={"Live Preview"} />
             </div>
           </div>
         </div>
@@ -71,9 +69,7 @@ export const Projects = () => {
                     <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/>Password encryption with bcrypt </li> 
 
                 </ul>
-                <div className="live-btn"><Link to="https://github.com/saad9122/todoList-Mern-Website.git" target="_blank">
-                Live Preview <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 
-                </Link></div>
+                <LivePreview link ={links.MERN_Todo_LIST} name={"Live Preview"} />
             </div>
           </div>
         </div>
@@ -97,9 +93,7 @@ export const Projects = () => {
                     <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/>Live chat with Socket.io </li> 
 
                 </ul>
-                <div className="live-btn"><Link to="https://github.com/saad9122/Whatsapp-MERN-Website.git" target="_blank">
-                Live Preview <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 
-                </Link></div>
+                <LivePreview link ={links.MERN_WHATSAPP} name={"Live Preview"} />
             </div>
           </div>
         </div>
@@ -118,9 +112,7 @@ export const Projects = () => {
                   <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> Tailwind CSS </li>
                   <li><FontAwesomeIcon icon={faCaretRight} className="project-icons"/> React </li> 
                 </ul>
-                <div className="live-btn"><Link to="https://bookshop-delta-umber.vercel.app/" target="_blank">
-                Live Preview <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 
-                </Link></div>
+                <LivePreview link ={links.BOOKSHOP} name={"Live Preview"} />
             </div>
           </div>
         </div>
@@ -139,12 +131,8 @@ export const Projects = () => {
                   <li> <FontAwesomeIcon icon={faCaretRight} className="project-icons"/>Tailwind CSS </li>
                 </ul>
                 <div className="d-flex justify-content-center gap-2">
-                <div className="live-btn"><Link to="https://impact2-8fhz5moq9-saad9122.vercel.app/" target="_blank">
-                Impact <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 
-                </Link></div>
-                <div className="live-btn"><Link to="https://mentor-github-io.vercel.app/" target="_blank">
-                Mentor <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="mx-1"/> 
-                </Link></div>
+                <LivePreview link ={links.IMPACT} name={"Impact"} />
+                <LivePreview link ={links.MENTOR} name={"Mentor"} />
 
                 </div>
                 
