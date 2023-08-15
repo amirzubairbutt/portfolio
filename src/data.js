@@ -76,15 +76,6 @@ export const contacts = [
     }
 ]
 
-export const links = {
-    E_COMMERECE : "https://e-commerece-peach.vercel.app/",
-    MERN_Todo_LIST :"https://github.com/saad9122/todoList-Mern-Website.git",
-    MERN_WHATSAPP: "https://github.com/saad9122/Whatsapp-MERN-Website.git",
-    BOOKSHOP: "https://bookshop-delta-umber.vercel.app/",
-    IMPACT: "https://impact2-8fhz5moq9-saad9122.vercel.app/",
-    MENTOR: "https://mentor-github-io.vercel.app/"
-    }
-
 export const projects = [
     {
         id:1,
