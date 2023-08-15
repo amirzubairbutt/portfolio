@@ -3,45 +3,96 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import myaboutimage from '../../assets/images/3.png';
 import "./about.css";
+import {motion} from "framer-motion"
 
 export const About = () => {
+
+  const listitems = ["React","Tailwind CSS", "Bootstrap", "Redux Thunk", "Framer Motion", "Node.js","Express.js","MongoDB"]
+
+
+  const ulVariant = {
+    hidden : {opacity : 0},
+    visible : {
+      opacity : 1,
+      transition: {
+        type: "spring",
+        delayChildren: 0.5,
+        staggerChildren: 0.08
+      }
+    }
+  }
+
+  const livariant = {
+    hidden: {opacity: 0,x: -70},
+    visible: {
+      opacity:1,
+      x:0,
+    }
+
+  }
+
+  const variant = {
+
+    hidden : {opacity: 0,x:-100},
+    visible : {opacity:1, x : 0,
+    transition:{
+      type:"spring",
+      damping: 10,
+      velocity: 2,
+      delay: 0.5,
+      delayChildren: 0.8,
+      staggerChildren: 0.01
+    }}
+  }
+
   return (
-    <section id="about">
-      <div className='about-me'>
+    <motion.section id="about" className='overflow-hidden'
+    >
+      <motion.div className='about-me'
+      initial = "hidden"
+      whileInView= "visible"
+      variants={variant}
+      viewport={{ once: true }}
+      >
         
         <h1 className='display-5'>About me</h1>
         <div className='section-line'></div>
         <p> Get to know me</p>
-      </div>
+      </motion.div>
     
-    <div className='row mt-3 about-me-data'>
-    <div className="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start">
-      <img class="about-img" src={myaboutimage} alt="Display" />
-    </div>
-    <div className="col-lg-6 mt-lg-2 mt-3 about-me-right">
-      <p className='lead'>Who am i?</p>
-      <p className='mt-lg-2 mt-3'><b>I am Saad ur Rehman, A Self Taught MERN Stack Developer.</b> </p>
-      <p className='mt-lg-2 mt-3'> I am  Proficient in MERN stack development, with a self-taught journey 
+    <motion.div className='row mt-3 about-me-data'
+        initial = "hidden"
+        whileInView= "visible"
+        variants={variant}
+        viewport={{ once: true }}
+    >
+    <motion.div className="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start" variants={variant}>
+      <motion.img className="about-img" src={myaboutimage} alt="Display" variants={variant} />
+    </motion.div>
+    <motion.div className="col-lg-6 mt-lg-2 mt-3 about-me-right" variants={variant}>
+      <motion.p className='lead' variants={variant}>Who am i?</motion.p>
+      <motion.p className='mt-lg-2 mt-3' variants={variant}><b>I am Saad ur Rehman, A Self Taught MERN Stack Developer.</b> </ motion.p>
+      <motion.p className='mt-lg-2 mt-3' variants={variant}> I am  Proficient in MERN stack development, with a self-taught journey 
       showcasing dedication, commitment, and a strong passion for learning.I am proficient in creating responsive and visually appealing designs,
       skilled in both front-end and back-end development,experienced in utilizing Redux for efficient state management, 
       enabling smooth data flow and enhanced application performance.
-        </p>
+      </motion.p>
          <div className="line"> </div>
          <div>
           <p>Technologies i have worked with</p>
-          <ul className='about-me-list mt-3 mt-lg-2 d-flex flex-wrap'>
-          <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Java Script</li>
-            <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> React</li>
-            <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Redux Thunk</li>
-            <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Tailwind CSS</li>
-            <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Bootstrap</li>
-            <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Node.js</li>
-            <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> Express.js</li>
-            <li><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> MongoDB</li>
-          </ul>
+          <motion.ul className='about-me-list mt-3 mt-lg-2 d-flex flex-wrap'
+          variants={ulVariant}
 
+          >
+            {
+              listitems.map((item,index) => {
+               return  <motion.li key={item + index}
+               variants={livariant}
+               ><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> {item}</motion.li>
+              })
+            }
 
-            
+          </motion.ul>    
 
           <div className="line"></div>
           <div>
@@ -55,8 +106,8 @@ export const About = () => {
             </div>
           </div>
          </div>
-    </div>
-    </div>
-  </section>
+    </motion.div>
+    </motion.div>
+  </motion.section>
   )
 }

@@ -51,14 +51,9 @@ export const CardSlider = () => {
     <div className="card-deck">
     <Slider {...settings}>
 
-      {services.map(service => <Cards service ={service}/>)}
+      {services.map(service => <Cards service ={service} key={service.id}/>)}
 
-      
-        {/* <FlipCardHtml />
-        <FlipcardRes />
-        <FlipCardReact />
-        <FlipCardBackend/>
-        <FlipCardDatabase/> */}
+    
     </Slider>
     </div>
  

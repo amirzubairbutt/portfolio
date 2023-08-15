@@ -39,7 +39,7 @@ export const Cards = ({service}) => {
           <p className='text-center h6`'>{service.backHeading}</p>
           <ul className='card-list'>
 
-            {service.list.map(text => <li>{text}</li>)}
+            {service.list.map((text,index) => <li key={text+index}>{text}</li>)}
     
           </ul>
           <div className='small-line'> </div>

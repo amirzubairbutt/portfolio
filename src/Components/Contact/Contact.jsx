@@ -1,9 +1,12 @@
 import React from 'react' 
 import Slider from 'react-slick';
-import "./contact.css"
 import { Contactcard } from './Contactcard';
-import { ContactCardEmail } from './ContactCardEmail';
-import { ContactCardPhone } from './ContactCardPhone';
+import { contacts } from '../../data';
+import {motion} from "framer-motion"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import "./contactCard.css"
+
 export const Contact = () => {
   const settings = {
 
@@ -40,21 +43,62 @@ export const Contact = () => {
 
 }
 
+const cardWrapper = {
+
+  hidden : {opacity: 0},
+  visible: {opacity: 1,
+  transition: {
+    duration: 1,
+    delayChildren: 0.5,
+    staggerChildren:0.08
+    }
+  }
+}
+
+const card = {
+
+  hidden : {opacity: 0, x: -50},
+  visible: {opacity: 1, x: 0,
+  transition: {
+    duration: 1,
+    }
+  }
+}
+
+
   return (
     <section id="contact">
     <div>
-      <h1 className='display-5 text-center'>Get in Touch</h1>
-      <div className="section-line"></div>
-      <p className='text-center'>Let's build something together</p>
-      <div className='contact-card-deck'>
+      <motion.div
+            initial = "hidden"
+            whileInView="visible"
+            variants={cardWrapper}
+            viewport={{ once: true }}
+      >
+          <h1 className='display-5 text-center'
+          >Get in Touch</h1>
+          <div className="section-line"></div>
+          <p className='text-center'>Let's build something together</p>
+      </motion.div>
+      
+      
+
+
+      <motion.div className='contact-card-deck'
+      initial = "hidden"
+      whileInView="visible"
+      variants={cardWrapper}
+      viewport={{ once: true }}
+      >
         <Slider {...settings}>
-          <Contactcard/>
-          <ContactCardEmail/>
-          <ContactCardPhone/>
+          {
+            contacts.map(contact => <Contactcard contact={contact} variant = {card} key={contact.id}/>)
+          }
+
         </Slider>
         
 
-      </div>
+      </motion.div>
     </div>
   </section>
   )

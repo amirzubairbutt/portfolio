@@ -26,5 +26,8 @@ div.section-line {
   margin: 1rem auto;
 } 
 
+.app {
+  background-color: var(--bg-color);
+}
 
 

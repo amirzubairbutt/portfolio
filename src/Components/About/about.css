@@ -6,7 +6,7 @@
 img.about-img {
     width: 20rem;
     height: 20rem;
-    animation: slide-down 1s ease-in;
+    /* animation: slide-down 1s ease-in;anim */
 }
 div.about-me-data {
     padding: 0 2rem;

@@ -26,6 +26,15 @@ export const Navbar = ({handleTheme}) => {
         responsive ? setResponsive(!responsive) : setResponsive(responsive)
       }
 
+      const handleHire = () => {
+        const recipient = "saad.ur922@gmail.com";
+        const subject = "Interview call";
+        const body = "Hey Saad we would like to meet you";
+        const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+        closeNavbar()
+      }
+
 
 
   return (
@@ -70,8 +79,8 @@ export const Navbar = ({handleTheme}) => {
             >{responsive && <FontAwesomeIcon icon={faAddressBook} className="icons" />} <Link onClick={closeNavbar} 
             to="#contact">Contact</Link></li>
 
-            <li className="resume"> <Link onClick={closeNavbar} 
-            className = "resume" to="https://github.com/saad9122" target="_blank">Resume {responsive && <FontAwesomeIcon icon={faArrowRight} className="icons" />}</Link></li>
+            <li className="resume"> <Link onClick={handleHire} 
+            className = "resume" target="_blank">Hire Me{responsive && <FontAwesomeIcon icon={faArrowRight} className="icons" />}</Link></li>
 
             {!responsive && <li 
             className="form-check form-switch"
