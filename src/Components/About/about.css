@@ -63,14 +63,14 @@ ul.about-me-list li FontAwesomeIcon{
 ul.about-me-list li {
     padding:0.2rem 0rem ;
 
-    flex-basis: 22%;
+    flex-basis: 25%;
 }
 
 @media (max-width:576px){
 
     ul.about-me-list li {
 
-        flex-basis: 40%;
+        flex-basis: 50%;
     }
 }
 
@@ -80,10 +80,6 @@ ul.about-me-list li > * {
 
 }
 
-
-ul.about-me-list li {
-    margin-right: 1rem
-}
 div.about-me-info{
     display: flex;
     justify-content: space-between;
