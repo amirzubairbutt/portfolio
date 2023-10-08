@@ -48,9 +48,9 @@ export const Navbar = ({handleTheme,theme}) => {
 
       const handleDocumentClick = (e) => {
 
-        console.log(e.target.matches("ul"))
+        console.log(e.target.closest("ul"))
 
-        if (!e.target.matches('ul')) {
+        if (!e.target.closest('ul')) {
 
           closeNavbar();
         }
