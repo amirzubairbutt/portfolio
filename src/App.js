@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { useState, useRef } from 'react';
 
@@ -13,7 +13,7 @@ import { About } from './Components/About/About';
 import { Projects } from './Components/Projects/Projects';
 import { Contact } from './Components/Contact/Contact';
 import { Footer } from './Footer/Footer';
-
+import { ContextProvider, ThemeContext } from './context.js/ContextProvider';
 
 
 function App() {
@@ -28,20 +28,25 @@ const rootRef = useRef(null);
 
   }
 
+// const {theme,handleTheme} = useContext(ThemeContext)
+
+
   return (
-    <div className= {`App ${theme}`}>
-    <BrowserRouter>
-    <div className="container-xxl" ref={rootRef}>
-      <Navbar handleTheme={handleTheme}/>
-      <Home />
-      <About />
-      <Services/>
-      <Projects />
-      <Contact />
-      <Footer/>
+    <ContextProvider>
+      <div className= {`App ${theme}`}>
+      <BrowserRouter>
+      <div className="container-xxl" ref={rootRef}>
+        <Navbar handleTheme={handleTheme} theme = {theme}/>
+        <Home />
+        <About />
+        <Services/>
+        <Projects />
+        <Contact />
+        <Footer/>
+        </div>
+      </BrowserRouter>
       </div>
-    </BrowserRouter>
-    </div>
+    </ContextProvider>
   );
 }
 
