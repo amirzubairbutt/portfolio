@@ -15,6 +15,7 @@ img.website {
     height:100%;
     border-radius: 0.6rem;
 }
+
 div.project-card {
     box-sizing: border-box;
     width: 35rem;
@@ -32,12 +33,19 @@ div.project-card {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width:1140px) {
+    div.project-card {
+    width: 29rem;
+    height: 18rem;
+    }
+    
+}
 @media screen and (max-width:576px) {
     div.project-card {
     width: 20rem;
     height: 12.5rem;
     }
-    
 }
 ul.project-ul {
     padding: 1rem;

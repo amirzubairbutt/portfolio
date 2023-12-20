@@ -48,8 +48,6 @@ export const Navbar = ({handleTheme,theme}) => {
 
       const handleDocumentClick = (e) => {
 
-        console.log(e.target.closest("ul"))
-
         if (!e.target.closest('ul')) {
 
           closeNavbar();
@@ -70,7 +68,7 @@ export const Navbar = ({handleTheme,theme}) => {
         <FontAwesomeIcon icon={faArrowUp}  className="go-top-arrow"/>
       </Link>
       </button>
-      <div className="navbar d-flex justify-content-between align-items-center">
+      <div className="navbar d-flex justify-content-between align-items-center py-1">
         <h4 className='order-2 order-md-1'>Saad ur Rehman</h4>
         <button 
         className={`navbar-btn ${responsiveNavbar} order-1`}>
@@ -86,7 +84,7 @@ export const Navbar = ({handleTheme,theme}) => {
               >
                 <FontAwesomeIcon icon={faMoon} className="icons mobile"/> Dark Mode <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
                 checked={theme === "light" ? false : true}
-                onClick={handleTheme}
+                onChange={handleTheme}
                 /> </li>}
                 {responsive && <hr/>}
 
@@ -114,7 +112,7 @@ export const Navbar = ({handleTheme,theme}) => {
               >
               <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
               checked={theme === "light" ? false : true}
-              onClick={handleTheme} 
+              onChange={handleTheme} 
               /> </li>}
 
           </ul>

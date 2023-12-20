@@ -2,6 +2,7 @@ import React from 'react'
 import { CardSlider } from '../CardSlider/CardSlider'
 
 import {motion} from "framer-motion"
+import "./services.css"
 
 export const Services = () => {
 

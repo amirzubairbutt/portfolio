@@ -6,6 +6,7 @@ import {motion} from "framer-motion"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./contactCard.css"
+import { revealHidden, revealLeftToRight } from '../../variants';
 
 export const Contact = () => {
   const settings = {
@@ -87,7 +88,7 @@ const card = {
       <motion.div className='contact-card-deck'
       initial = "hidden"
       whileInView="visible"
-      variants={cardWrapper}
+      variants={revealHidden}
       viewport={{ once: true }}
       >
         <Slider {...settings}>

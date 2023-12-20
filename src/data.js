@@ -67,7 +67,7 @@ export const contacts = [
     {
         id:2,
         icon: faEnvelope,
-        text: "Saadurrehman.dev@gmail.com"
+        text: "saadurrehman.dev@gmail.com"
     },
     {
         id:3,

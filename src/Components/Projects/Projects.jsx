@@ -19,8 +19,8 @@ export const Projects = () => {
   }
 
   const popProject = {
-    hidden: {scale: 0},
-    visible: {scale: 1, 
+    hidden: {opacity: 0},
+    visible: {opacity : 1, 
       transition: {
         type: "spring",
         damping: 12

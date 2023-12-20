@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import "./global.css";
 import { Navbar } from './Components/Navbar/Navbar';
-import { Home } from './Components/Home/Home';
+import { Home } from './Components/Home/Home.jsx';
 import { Services } from './Components/Services/Services';
 import { About } from './Components/About/About';
 import { Projects } from './Components/Projects/Projects';
@@ -18,9 +18,18 @@ import { ContextProvider, ThemeContext } from './context.js/ContextProvider';
 
 function App() {
 
+  function getInitialColorScheme() {
+
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    console.log(isDark ? 'dark' : 'light')
+
+    return isDark ? 'dark' : 'light';
+  }
   
-const [theme,setTheme] = useState("light");
+const [theme,setTheme] = useState(getInitialColorScheme);
 const rootRef = useRef(null);
+
 
   const handleTheme = () =>{
 

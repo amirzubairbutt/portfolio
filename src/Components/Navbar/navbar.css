@@ -62,6 +62,7 @@ ul.navbar-ul.mobile li.resume a{
 }
 
 ul.navbar-ul.pc li:hover{
+    transition: 0.4s;
     background-color: var(--second);
     cursor: pointer;
 }
@@ -70,7 +71,7 @@ ul.nacvar-ul.pc li:hover {
     cursor: default;
 }
 ul.navbar-ul.pc li:hover a {
-
+    transition: 0.4s;
     color:var(--bg-color);
 }
 

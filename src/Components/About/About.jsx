@@ -4,6 +4,7 @@ import React from 'react';
 import myaboutimage from '../../assets/images/3.png';
 import "./about.css";
 import {motion} from "framer-motion"
+import { contacts } from '../../data';
 
 export const About = () => {
 
@@ -33,11 +34,11 @@ export const About = () => {
 
   const variant = {
 
-    hidden : {opacity: 0,x:-100},
+    hidden : {opacity: 0,x:-20},
     visible : {opacity:1, x : 0,
     transition:{
       type:"spring",
-      damping: 10,
+      damping: 25,
       velocity: 2,
       delay: 0.5,
       delayChildren: 0.8,
@@ -98,7 +99,7 @@ export const About = () => {
           <div>
             <div className="row g-3 about-me-info">
               <div className='col-lg-6'><p><b>Name:</b> Saad ur Rehman</p></div>
-              <div className='col-lg-6'><p><b>Email:</b> Saad.ur922@gmail.com</p></div>
+              <div className='col-lg-6'><p><b>Email:</b> {contacts[1].text}</p></div>
             </div>
             <div className="row hide-for-mobile mt-2">
             <div className='col-lg-6'><p><b>Age:</b> 25</p></div>

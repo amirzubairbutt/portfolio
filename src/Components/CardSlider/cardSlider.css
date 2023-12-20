@@ -77,3 +77,8 @@ opacity: .25;
     -moz-osx-font-smoothing: grayscale;
     z-index: 1020;
 }
+
+div.card:hover{
+    transition: 0.3s;
+    transform: translateY(-10px);
+}

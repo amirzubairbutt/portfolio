@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import "./home.css";
-import myimage from '../../assets/images/3.png';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import {delay, motion} from "framer-motion"
+import {motion} from "framer-motion"
+import { certificate } from './homeData';
+import { Certification } from './Certification';
+import { revealHidden, revealLeftToRight } from '../../variants';
 
 
 //import myimage from './images/1.jpg';
 
 export const Home = () => {
    
-  const string =  ["MERN-Stack Developer","Crafting Experiences with React", "Redux State Master", "Responsive Designs Specialist",
-                  
+  const string =  ["Crafting Experiences with React", "Redux State Master", "Responsive Designs Specialist", "Scalable MERN Applications",
+
                   ];
 
   const line = "WELCOME TO MY PORTFOLIO"
@@ -71,15 +72,15 @@ export const Home = () => {
 
   return (
     <section id="home">
-      <motion.div className="row g-2"
+      <motion.div className="row g-2 w-100"
       initial = "hidden"
       whileInView = "visible"
-      variants= {wrapper}
+      variants= {revealHidden}
       viewport={{ once: true }}
       >
-        <motion.div className="col-lg-6 order-2 order-lg-1 home-left" variants={leftToRight}>
+        <motion.div className="col-lg-6 home-left" variants={leftToRight}>
 
-          <motion.p className='lead' 
+          <motion.p className='h3' 
           variants={wrapper}
           > 
           
@@ -97,20 +98,49 @@ export const Home = () => {
           
           </motion.p>
 
-          <h1 className='display-2'>Saad</h1>
-          <h1 className="display-3"><b>ur Rehman</b></h1>
-          <p className='lead mt-2'><FontAwesomeIcon icon={faCaretRight} style={{color:"var(--second)"}}/> {string[index]}</p>
-          <div className='home-icons mt-lg-3 mt-1'>
+          
+          <p className='lead'>I am</p>
+          <h1 className="display-3 mt-1"><b>Saad ur Rehman</b></h1>
+          <h1 className="display-6 mt-1">MERN Stack Developer
+          </h1>
 
-            <Link to="https://github.com/saad9122" target="_blank" className='icon'> <FontAwesomeIcon icon={faGithub}/> </Link>
+          <p className='lead mt-2'><FontAwesomeIcon icon={faCaretRight} style={{color:"var(--second)"}}/> {string[index]}</p>
+          <div className='home-icons mt-lg-3 mt-1 d-flex'>
+
+            <a href="https://linkedin.com/in/saad-ur-rehman-586b95292" target="_blank" className='icon' rel='noreferrer noopener'> 
+            <FontAwesomeIcon icon={faLinkedin}/> </a>
+            <a href="https://github.com/saad9122" target="_blank" className='icon' rel='noreferrer noopener'> 
+            <FontAwesomeIcon icon={faGithub}/> </a>
 
           </div>
+
+          {/* <div className='d'>
+              {
+                certificate.map(data => <Certification title={data.title} by={data.by} link={data.link}  />)
+              }
+
+          </div> */}
+
         </motion.div>
 
-        <motion.div className="col-lg-6 d-flex order-1 order-lg-2 justify-content-center justify-content-lg-end"
-        variants={wrapper}
+        <motion.div className="col-lg-6 d-flex justify-content-center"
+        variants={revealLeftToRight}
         >
-           <img className="myimage" src={myimage} alt="myimage"/>
+          <motion.div className='d-flex flex-column align-item-center justify-content-evenly'
+            initial = "hidden"
+            whileInView = "visible"
+            variants= {revealHidden}
+            viewport={{ once: true }}
+          >
+            {/* {
+              blocksDetail.map(detail => <Block text={detail.text} color={detail.color} background={detail.backgourd  }/>)
+            }         */}
+
+              {
+                certificate.map(data => <Certification title={data.title} by={data.by} link={data.link}  key={data.id}/>)
+              }
+
+          </motion.div>
         </motion.div>
 
       </motion.div>
