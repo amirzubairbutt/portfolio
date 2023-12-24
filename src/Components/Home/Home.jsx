@@ -4,10 +4,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import "./home.css";
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import {motion} from "framer-motion"
-import { certificate } from './homeData';
-import { Certification } from './Certification';
 import { revealHidden, revealLeftToRight } from '../../variants';
-
+import myimage from '../../assets/images/3.png';
 
 //import myimage from './images/1.jpg';
 
@@ -78,7 +76,7 @@ export const Home = () => {
       variants= {revealHidden}
       viewport={{ once: true }}
       >
-        <motion.div className="col-lg-6 home-left" variants={leftToRight}>
+        <motion.div className="col-lg-6 order-2 order-lg-1 home-left" variants={leftToRight}>
 
           <motion.p className='h3' 
           variants={wrapper}
@@ -114,33 +112,14 @@ export const Home = () => {
 
           </div>
 
-          {/* <div className='d'>
-              {
-                certificate.map(data => <Certification title={data.title} by={data.by} link={data.link}  />)
-              }
-
-          </div> */}
-
         </motion.div>
 
-        <motion.div className="col-lg-6 d-flex justify-content-center"
+        <motion.div className="col-lg-6 order-1 order-lg-2 d-flex justify-content-center justify-content-lg-end align-items-center"
         variants={revealLeftToRight}
         >
-          <motion.div className='d-flex flex-column align-item-center justify-content-evenly'
-            initial = "hidden"
-            whileInView = "visible"
-            variants= {revealHidden}
-            viewport={{ once: true }}
-          >
-            {/* {
-              blocksDetail.map(detail => <Block text={detail.text} color={detail.color} background={detail.backgourd  }/>)
-            }         */}
+          
+          <img className="myimage" src={myimage} alt="myimage"/>
 
-              {
-                certificate.map(data => <Certification title={data.title} by={data.by} link={data.link}  key={data.id}/>)
-              }
-
-          </motion.div>
         </motion.div>
 
       </motion.div>

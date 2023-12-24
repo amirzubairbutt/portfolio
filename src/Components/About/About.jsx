@@ -5,7 +5,9 @@ import myaboutimage from '../../assets/images/3.png';
 import "./about.css";
 import {motion} from "framer-motion"
 import { contacts } from '../../data';
-
+import { certificate } from '../Home/homeData';
+import { Certification} from "../Home/Certification"
+import { revealHidden } from '../../variants';
 export const About = () => {
 
   const listitems = ["React","Tailwind CSS", "Bootstrap", "Redux Thunk", "Framer Motion", "Node.js","Express.js","MongoDB"]
@@ -61,19 +63,33 @@ export const About = () => {
         <p> Get to know me</p>
       </motion.div>
     
-    <motion.div className='row mt-3 about-me-data'
+    <motion.div className='row mt-3 about-me-data gap-4 gap-lg-0'
         initial = "hidden"
         whileInView= "visible"
         variants={variant}
         viewport={{ once: true }}
     >
-    <motion.div className="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start" variants={variant}>
-      <motion.img className="about-img" src={myaboutimage} alt="Display" variants={variant} />
+    <motion.div className="col-lg-6 d-flex flex-column align-items-center justify-content-center justify-content-lg-start
+    order-2 order-lg-1
+    " 
+    variants={variant}>
+                <motion.div className='d-flex flex-column align-item-center justify-content-evenly gap-4 gap-lg-2'
+            initial = "hidden"
+            whileInView = "visible"
+            variants= {revealHidden}
+            viewport={{ once: true }}
+          >
+
+              {
+                certificate.map(data => <Certification title={data.title} by={data.by} link={data.link}  key={data.id}/>)
+              } 
+
+          </motion.div>
     </motion.div>
-    <motion.div className="col-lg-6 mt-lg-2 mt-3 about-me-right" variants={variant}>
+    <motion.div className="col-lg-6 mt-lg-2 mt-3 about-me-right order-1 order-lg-2" variants={variant}>
       <motion.p className='lead' variants={variant}>Who am i?</motion.p>
       <motion.p className='mt-lg-2 mt-3' variants={variant}><b>I am Saad ur Rehman, A Self Taught MERN Stack Developer.</b> </ motion.p>
-      <motion.p className='mt-lg-2 mt-3' variants={variant}> I am  Proficient in MERN stack development, with a self-taught journey 
+      <motion.p className='mt-lg-3 mt-3 ' variants={variant}> I am  Proficient in MERN stack development, with a self-taught journey 
       showcasing dedication, commitment, and a strong passion for learning.I am proficient in creating responsive and visually appealing designs,
       skilled in both front-end and back-end development,experienced in utilizing Redux for efficient state management, 
       enabling smooth data flow and enhanced application performance.
@@ -81,13 +97,13 @@ export const About = () => {
          <div className="line"> </div>
          <div>
           <p>Technologies i have worked with</p>
-          <motion.ul className='about-me-list mt-3 mt-lg-2 d-flex flex-wrap'
+          <motion.ul className='about-me-list mt-3 mt-lg-3 d-flex flex-wrap'
           variants={ulVariant}
 
           >
             {
               listitems.map((item,index) => {
-               return  <motion.li key={item + index}
+               return  <motion.li key={item + index} className='mt-1'
                variants={livariant}
                ><FontAwesomeIcon icon={faCaretRight} className="about-me-icons"/> {item}</motion.li>
               })
@@ -101,7 +117,7 @@ export const About = () => {
               <div className='col-lg-6'><p><b>Name:</b> Saad ur Rehman</p></div>
               <div className='col-lg-6'><p><b>Email:</b> {contacts[1].text}</p></div>
             </div>
-            <div className="row hide-for-mobile mt-2">
+            <div className="row hide-for-mobile mt-3">
             <div className='col-lg-6'><p><b>Age:</b> 25</p></div>
               <div className='col-lg-6'><p><b>From:</b> Lahore,PK</p></div>
             </div>
