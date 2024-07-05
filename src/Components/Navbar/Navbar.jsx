@@ -38,9 +38,9 @@ export const Navbar = ({handleTheme,theme}) => {
       }
 
       const handleHire = () => {
-        const recipient = "saadurrheman.dev@gmail.com";
+        const recipient = "amirzubairbutt@gmail.com";
         const subject = "Interview call";
-        const body = "Hey Saad we would like to meet you";
+        const body = "Hey Amir we would like to meet you";
         const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.location.href = mailtoUrl;
         closeNavbar()
@@ -69,7 +69,7 @@ export const Navbar = ({handleTheme,theme}) => {
       </Link>
       </button>
       <div className="navbar d-flex justify-content-between align-items-center py-1">
-        <h4 className='order-2 order-md-1'>Saad ur Rehman</h4>
+        <h4 className='order-2 order-md-1'>Amir Zubair Butt</h4>
         <button 
         className={`navbar-btn ${responsiveNavbar} order-1`}>
         {!responsive ? <FontAwesomeIcon icon={faBars} onClick={openNavbar}/> : <FontAwesomeIcon icon={faXmark} onClick={closeNavbar} />}
@@ -77,7 +77,7 @@ export const Navbar = ({handleTheme,theme}) => {
         <nav className= {`${responsiveNavbar} order-2`} onClick={handleDocumentClick}>
           <ul className={`navbar-ul ${responsiveNavbar} flex align-center`}>
 
-              {responsive && <li className='name'> <h5>Saad ur Rehman</h5></li>}
+              {responsive && <li className='name'> <h5>Amir Zubair Butt</h5></li>}
               {responsive && <hr/>}
               {responsive && <li 
               class="form-check form-switch"

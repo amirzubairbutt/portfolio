@@ -88,7 +88,7 @@ export const About = () => {
     </motion.div>
     <motion.div className="col-lg-6 mt-lg-2 mt-3 about-me-right order-1 order-lg-2" variants={variant}>
       <motion.p className='lead' variants={variant}>Who am i?</motion.p>
-      <motion.p className='mt-lg-2 mt-3' variants={variant}><b>I am Saad ur Rehman, A Self Taught MERN Stack Developer.</b> </ motion.p>
+      <motion.p className='mt-lg-2 mt-3' variants={variant}><b>I am Amir Zubair Butt, A Self Taught Mobile App & React Native Developer.</b> </ motion.p>
       <motion.p className='mt-lg-3 mt-3 ' variants={variant}> I am  Proficient in MERN stack development, with a self-taught journey 
       showcasing dedication, commitment, and a strong passion for learning.I am proficient in creating responsive and visually appealing designs,
       skilled in both front-end and back-end development,experienced in utilizing Redux for efficient state management, 
@@ -114,7 +114,7 @@ export const About = () => {
           <div className="line"></div>
           <div>
             <div className="row g-3 about-me-info">
-              <div className='col-lg-6'><p><b>Name:</b> Saad ur Rehman</p></div>
+              <div className='col-lg-6'><p><b>Name:</b> Amir Zubair Butt</p></div>
               <div className='col-lg-6'><p><b>Email:</b> {contacts[1].text}</p></div>
             </div>
             <div className="row hide-for-mobile mt-3">

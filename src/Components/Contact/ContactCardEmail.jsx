@@ -7,7 +7,7 @@ export const ContactCardEmail = () => {
   return (
     <div className='contact-card'>
         <FontAwesomeIcon icon={faEnvelope} className="contact-icon"/> 
-        <p className='lead'>Saad.ur922@gmail.com</p>
+        <p className='lead'>amirzubairbutt@gmail.com</p>
     </div>
   )
 }

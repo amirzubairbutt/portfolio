@@ -98,16 +98,16 @@ export const Home = () => {
 
           
           <p className='lead'>I am</p>
-          <h1 className="display-3 mt-1"><b>Saad ur Rehman</b></h1>
-          <h1 className="display-6 mt-1">MERN Stack Developer
+          <h1 className="display-3 mt-1"><b>Amir Zubair Butt</b></h1>
+          <h1 className="display-6 mt-1">React native Developer
           </h1>
 
           <p className='lead mt-2'><FontAwesomeIcon icon={faCaretRight} style={{color:"var(--second)"}}/> {string[index]}</p>
           <div className='home-icons mt-lg-3 mt-1 d-flex'>
 
-            <a href="https://linkedin.com/in/saad-ur-rehman-586b95292" target="_blank" className='icon' rel='noreferrer noopener'> 
+            <a href="https://linkedin.com/in/amirzubairbutt" target="_blank" className='icon' rel='noreferrer noopener'> 
             <FontAwesomeIcon icon={faLinkedin}/> </a>
-            <a href="https://github.com/saad9122" target="_blank" className='icon' rel='noreferrer noopener'> 
+            <a href="https://github.com/amirzubairbutt" target="_blank" className='icon' rel='noreferrer noopener'> 
             <FontAwesomeIcon icon={faGithub}/> </a>
 
           </div>
